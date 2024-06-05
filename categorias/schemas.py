@@ -1,5 +1,5 @@
 from typing import Annotated
-from pydantic import PositiveFloat, Field
+from pydantic import Field
 from contrib.schemas import BaseSchema
 
 
