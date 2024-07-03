@@ -1,5 +1,6 @@
 from sqlalchemy import Integer, String
 from sqlalchemy.orm import mapped_column, Mapped, relationship
+
 from atleta.models import AtletaModel
 from contrib.models import BaseModel
 
