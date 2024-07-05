@@ -9,5 +9,9 @@ class CentroTreinamentoIn(BaseSchema):
     proprietario: Annotated[str, Field(description="Nome do proprietário do Centro de Treinamento", example="Tom Cruise", max_length=30)]
 
 
+class CentroTreinamentoAtleta(BaseSchema):
+    nome: Annotated[str, Field(description="Nome do Centro de Treinamento", examples=["CT Power"], max_length=20)]
+
+
 class CentroTreinamentoOut(CentroTreinamentoIn):
     id: Annotated[UUID4, Field(description='Identificador do centro de treinamento')]
