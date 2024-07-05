@@ -45,7 +45,7 @@ async def query(db_session: DatabaseDependency) -> list[CentroTreinamentoOut]:
             status_code=status.HTTP_200_OK,
             response_model=CentroTreinamentoOut,
             )
-async def query(id_request: UUID4, db_session: DatabaseDependency) -> CentroTreinamentoOut:
+async def get(id_request: UUID4, db_session: DatabaseDependency) -> CentroTreinamentoOut:
     centro_treinamento: CentroTreinamentoOut = (await db_session.execute(select(CentroTreinamentoModel)
                                                                          .filter_by(id=id_request))).scalars().first()
 
